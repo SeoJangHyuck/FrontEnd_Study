@@ -1,0 +1,27 @@
+npm install -g typescript
+
+npm init -y
+
+npm install --save-dev typescript ts-node
+
+node_modules/.bin/ts-node hello.ts
+
+package.json 안에 추가
+"scripts": {
+    "start": "ts-node hello.ts"
+}
+
+tsc --init
+
+tsconfig.json 안에 추가
+"compilerOptions": {
+	"skipLibCheck": true,
+	"target": "es6",
+	"module": "commonjs",    
+	"lib": ["dom", "es2015", "es2018.promise"],
+	"strict": true,
+	"noImplicitAny": false,
+	"esModuleInterop": true  
+ }
+
+npm install @reactivex/rxjs@5.5.6 --save-dev
